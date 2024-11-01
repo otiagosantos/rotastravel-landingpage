@@ -1,0 +1,100 @@
+:root {
+
+    /* COLORS */
+    /* id visual */
+    --clr-id-title-1: #FDF6F9;
+    --clr-id-hl-1: #0C8187;
+    --clr-id-hl-2: #FDCD55;
+    --clr-id-hl-3: #51360F;
+    --clr-id-bg-1: #150102;
+
+    /* site */
+    --clr-site-text-1: #FDFDFD;
+    --clr-site-bg-1: #01132A;
+
+    --fm-site-1: 'Arial';
+
+    --fs-site-XL: 2.5rem;
+    --fs-site-L: 1.75rem;
+    --fs-site-M: 1rem;
+    --fs-site-S: 0.75rem;
+    --fs-site-XS: 0.5rem;
+}
+
+
+
+body {
+    font-family: var(--fm-site-1);
+
+    color: var(--clr-site-text-1);
+
+    background-color: var(--clr-site-bg-1);
+
+    position: relative;
+
+    scroll-behavior: smooth;
+}
+
+main {
+    margin: 0 auto;
+}
+
+main p {
+    text-align: justify;
+}
+
+
+main section:not(#hero) {
+    margin: 5rem;
+    color: white;
+}
+
+h2 {
+    font-size: var(--fs-site-L);
+}
+
+p {
+    font-size: var(--fs-site-M);
+}
+
+.width-default {
+    max-width: 1200px;
+    width: 100%;
+
+    /* margin: 0 auto; */
+
+    background-color: red;
+}
+
+.width-large {
+    max-width: 1920px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    :root {
+
+        --fs-site-XL: 3.0rem;
+        --fs-site-L: 2rem;
+        --fs-site-M: 1rem;
+        --fs-site-S: 0.85rem;
+        --fs-site-XS: 0.75rem;
+
+    }
+
+
+    p{
+        font-size: var(--fs-site-M)
+    }
+
+
+
+
+    .width-default {
+        max-width: 100vw;
+        width: 100%;
+        background-color: purple;
+    }
+
+}

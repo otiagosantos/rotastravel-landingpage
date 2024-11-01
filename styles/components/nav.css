@@ -1,0 +1,80 @@
+
+
+header {
+    width: 100vw;
+    max-width: 100%;
+
+    /* temp */
+    /* background-color: #505050; */
+
+    float: inline-start;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    transition: all 1s;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 0 2rem;
+    
+}
+
+
+
+
+header nav img {
+    max-width: 100px;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    
+}
+header nav ul li {
+
+   list-style: none; 
+
+}
+header nav ul li a {
+
+    color: var(--clr-site-text-1);
+
+}
+
+
+
+
+header nav .media-container {
+    display: flex;
+    gap: 1rem;
+}
+
+header nav .media-container img {
+    max-width: 30px;
+}
+
+
+
+.scrolled {
+    background-color: red;
+}
+
+
+
+
+
+
+/* TO-DO: p1 Fazer nav menu se comportar diferente no mobile.  */
+@media (max-width: 768px) {
+ 
+    /* TO-DO: p2 conferir pq a lista está bugando no mobile */
+    header nav ul {
+        display: none;
+    }
+}
