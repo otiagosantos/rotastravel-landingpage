@@ -21,9 +21,15 @@
     --fs-site-XS: 0.5rem;
 }
 
-
+a {
+    scroll-behavior: smooth;
+}
 
 body {
+    /* transition: all 1s; */
+    max-width: 100vw;
+    width: 100%;
+
     font-family: var(--fm-site-1);
 
     color: var(--clr-site-text-1);
@@ -35,17 +41,28 @@ body {
     scroll-behavior: smooth;
 }
 
-main {
+main.site-content {
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
+
+    /* background-color: black; */
+
 }
 
-main p {
+main.site-content p {
     text-align: justify;
 }
 
+main.site-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-main section:not(#hero) {
-    margin: 5rem;
+}
+
+main.site-content section:not(#hero) {
+    margin: 5rem 1rem;
     color: white;
 }
 
@@ -59,9 +76,8 @@ p {
 
 .width-default {
     max-width: 1200px;
-    width: 100%;
 
-    /* margin: 0 auto; */
+    width: 100%;  
 
     background-color: red;
 }
@@ -72,28 +88,24 @@ p {
 }
 
 @media (max-width: 768px) {
-
     :root {
 
-        --fs-site-XL: 3.0rem;
-        --fs-site-L: 2rem;
+        --fs-site-XL: 2.5rem;
+        --fs-site-L: 1.75rem;
         --fs-site-M: 1rem;
         --fs-site-S: 0.85rem;
         --fs-site-XS: 0.75rem;
 
     }
 
-
     p{
         font-size: var(--fs-site-M)
     }
 
 
-
-
     .width-default {
         max-width: 100vw;
-        width: 100%;
+        width: auto;
         background-color: purple;
     }
 
