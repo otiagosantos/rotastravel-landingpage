@@ -14,7 +14,7 @@
 
     --fm-site-1: 'Arial';
 
-    --fs-site-XL: 2.5rem;
+    --fs-site-XL: 3rem;
     --fs-site-L: 1.75rem;
     --fs-site-M: 1rem;
     --fs-site-S: 0.75rem;
@@ -79,6 +79,7 @@ p {
 
     width: 100%;  
 
+    /* temp */
     background-color: red;
 }
 
