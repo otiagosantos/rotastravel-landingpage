@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Galery App</title>
+
+    <link rel="stylesheet" href="/styles/reset.css">
+
+    <script src="galery-app.js" defer></script>
+
+    <style>
+        * {
+            list-style: none;
+        }
+
+        body {
+            max-width: 100%;
+            min-height: 100vh;
+
+            background-color: #303030;
+
+            color: #fff;
+        }
+
+        #galery-app {
+
+            background-color: #353530;
+
+            font-family: sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #galery-app .cards-container {
+            background-color: purple;
+            width: 1200px;
+
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #galery-app .cards-container .card {
+            width: 300px;
+            height: 500px;
+
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #card-x {
+            background-color: red;
+        }
+        #card-y {
+            background-color: blue;
+        }
+        #card-z {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="galery-app">
+        <ul class="cards-container">
+            <li class="card" id="card-x">
+                <figure>
+                    <figcaption>Card 1</figcaption>
+                </figure>
+            </li>
+            <li class="card" id="card-y">
+                <figure>
+                    <figcaption>Card 2</figcaption>
+                </figure>
+            </li>
+            <li class="card" id="card-z">
+                <figure>
+                    <figcaption>Card 3</figcaption>
+                </figure>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

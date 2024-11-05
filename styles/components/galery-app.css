@@ -1,0 +1,17 @@
+.destinos-galery-app-container {
+
+}
+
+#galery-app {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#galery-app figure { 
+
+}
+
+#galery-app figure figcaption {
+    font-size: var(--fs-site-L);
+}

@@ -15,7 +15,7 @@
     --fm-site-1: 'Arial';
 
     --fs-site-XL: 3rem;
-    --fs-site-L: 1.75rem;
+    --fs-site-L: 2rem;
     --fs-site-M: 1rem;
     --fs-site-S: 0.75rem;
     --fs-site-XS: 0.5rem;
@@ -79,8 +79,9 @@ p {
 
     width: 100%;  
 
+    margin: 0 auto;
     /* temp */
-    background-color: red;
+    /* background-color: red; */
 }
 
 .width-large {
@@ -92,7 +93,7 @@ p {
     :root {
 
         --fs-site-XL: 2.5rem;
-        --fs-site-L: 1.75rem;
+        --fs-site-L: 1.9rem;
         --fs-site-M: 1rem;
         --fs-site-S: 0.85rem;
         --fs-site-XS: 0.75rem;
