@@ -24,7 +24,7 @@ mainNavMenu.whenScroll();
 //     });
 // });
 
-
+// TO-DO: p2 Criar um modulo separado para isso:
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(event) {
         event.preventDefault();
