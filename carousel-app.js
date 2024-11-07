@@ -24,7 +24,7 @@
 # Modules:
 - [X] Selector of Elements
 - [X] Card Data Model & List
-- [ ] Card Builder
+- [X] Card Builder
 - [ ] Cards Container Slide Manupulator
 - [ ] Slide cards with Swipe Motion (For Mobile)
 
@@ -43,12 +43,13 @@ class Gallery {
 class CardModel {
 
     title;
-    cardImageSrc;
+    workdir;
+    imgSrc;
     #gallery;
 
-    constructor(title, cardImg, galleryInstance) {
+    constructor(title, imgSrc, galleryInstance) {
         this.title = title;
-        this.cardImageSrc = cardImg;
+        this.imgSrc = imgSrc;
         this.#gallery = galleryInstance;
     }
 
@@ -77,17 +78,18 @@ class CardComponent {
 
     static render(cardModel) {
 
-        let component = document.createElement("li")
-        component.setAttribute("class", "card");
-        component.setAttribute("id", `card-${cardModel.title}`)
+        const li = document.createElement("li");
+        li.setAttribute("class", "card");
+        li.setAttribute("id", `card-${cardModel.title.trim()}`);
 
-        component.innerHTML = `
+        li.innerHTML = `
             <figure>
                 <figcaption>${cardModel.title}</figcaption>
+                <img src="${cardModel.imgSrc}" href="${cardModel.title} image." >
             </figure>
         `;
 
-        return component;
+        return li;
     }
 }
 
@@ -105,30 +107,30 @@ class CarouselAppComponent {
     }
 
     cardModelList;
-    // CardComponent;
+
+    positions = [] 
 
     constructor(cardModelList) {
         this.cardModelList = cardModelList;
 
     }
-    
-    render() {
-        const component = document.createElement("div");
-        component.setAttribute("class", "carousel-handler");
-        
-        component.innerHTML = `
-            <ul>
-            ${
-                this.cardModelList.map(cardModel => {
-                    console.log(CardComponent.render(cardModel));
-                    return CardComponent.render(cardModel).innerHTML;
-                }).join('')
-            }
-            </ul>
-        `;
 
-        // console.log(this.element.carouselApp())
-        this.element.carouselApp().appendChild(component)
+    setPositions() {
+        
+    }
+
+    render() {
+        const carousel = document.createElement("div");
+        carousel.setAttribute("class", "carousel-handler");
+
+        const ul = document.createElement("ul");
+        ul.setAttribute("class", "cards-container");
+
+        this.cardModelList.forEach(cardModel => {
+            ul.appendChild(CardComponent.render(cardModel))
+        });
+        carousel.appendChild(ul);
+        this.element.carouselApp().appendChild(carousel)
     }
 }
 
@@ -136,9 +138,10 @@ function main() {
 
     const cardModelList = new Array();
 
-    cardModelList.push(new CardModel("cartão 1", "", new Gallery()));
-    cardModelList.push(new CardModel("cartão 2", "", new Gallery()));
-    cardModelList.push(new CardModel("cartão 3", "", new Gallery()));
+    // cardModelList.push(new CardModel("Chile", "/assets/images/chile-pg-2.png", new Gallery()));
+    cardModelList.push(new CardModel("Argentina", "", new Gallery()));
+    cardModelList.push(new CardModel("Chile", "", new Gallery()));
+    cardModelList.push(new CardModel("Bolívia", "", new Gallery()));
 
     const carouselAppComponent = new CarouselAppComponent(cardModelList);
 
