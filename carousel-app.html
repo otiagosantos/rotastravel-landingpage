@@ -36,9 +36,13 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            transition: all 1s;
         }
 
-        #carousel-app .cards-container {
+        #carousel-app .carousel-handler {}
+
+        #carousel-app .carousel-handler .cards-container {
             background-color: purple;
             width: 1200px;
 
@@ -46,12 +50,14 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            align-items: center;
         }
 
-        #carousel-app .cards-container .card {
-            width: 300px;
-            height: 500px;
+        #carousel-app .carousel-handler .cards-container .card {
+            /* width: 300px; */
+            /* height: 500px; */
 
+            background-color: red;
 
             display: flex;
             flex-direction: column;
@@ -59,21 +65,43 @@
             align-items: center;
         }
 
+        #carousel-app .card img {
+            width: 100%;
+            height: auto;
+        }
+
         .card:nth-of-type(1) {
-            background-color: red;
+            /* background-color: red; */
+            width: 150px;
+            height: 250px;
         }
         .card:nth-of-type(2) {
-            background-color: blue;
+            /* background-color: blue; */
+            width: 300px;
+            height: 500px
         }
         .card:nth-of-type(3) {
-            background-color: green;
+            /* background-color: green; */
+            width: 150px;
+            height: 250px;
         }
     </style>
 </head>
 
 <body>
 
-    <div id="carousel-app"></div>
+    <div id="carousel-app">
+
+        <!-- All carousel app stuffs here -->
+
+    </div>
+    <nav class="carousel-navigator">
+        <button>To Left</button>
+        <button>More About</button>
+        <button>To Right</button>
+    </nav>
+
+
 
 </body>
 
