@@ -68,22 +68,23 @@ class CardModel {
 
 class CardComponent {
 
-    cardDataModel;
+    // cardDataModel;
 
-    constructor(cardDataModel) {
-        console.log(cardDataModel);
-        this.cardDataModel = cardDataModel;
-    }
+    // constructor(cardDataModel) {
+    //     console.log(cardDataModel);
+    //     this.cardDataModel = cardDataModel;
+    // }
 
-    render() {
+    static render(cardModel) {
+
         let component = document.createElement("li")
         component.setAttribute("class", "card");
-        component.setAttribute("id", `card-${title}`)
+        component.setAttribute("id", `card-${cardModel.title}`)
 
         component.innerHTML = `
             <figure>
-                <figcaption>${this.cardDataModel.title}</figcaption>
-            </figure>    
+                <figcaption>${cardModel.title}</figcaption>
+            </figure>
         `;
 
         return component;
@@ -92,7 +93,7 @@ class CardComponent {
 
 class CarouselAppComponent {
     element = {
-        galleryApp: () => {
+        carouselApp: () => {
             return document.querySelector("#carousel-app");
         },
         cardsContainer: () => {
@@ -104,15 +105,30 @@ class CarouselAppComponent {
     }
 
     cardModelList;
-    CardComponent;
+    // CardComponent;
 
-    constructor(cardList) {
-        this.cardList = cardList;
+    constructor(cardModelList) {
+        this.cardModelList = cardModelList;
+
     }
-
+    
     render() {
         const component = document.createElement("div");
-        component.setAttribute("class", "carouselHandler");
+        component.setAttribute("class", "carousel-handler");
+        
+        component.innerHTML = `
+            <ul>
+            ${
+                this.cardModelList.map(cardModel => {
+                    console.log(CardComponent.render(cardModel));
+                    return CardComponent.render(cardModel).innerHTML;
+                }).join('')
+            }
+            </ul>
+        `;
+
+        // console.log(this.element.carouselApp())
+        this.element.carouselApp().appendChild(component)
     }
 }
 
@@ -120,11 +136,15 @@ function main() {
 
     const cardModelList = new Array();
 
-    cardModelList.push(new CardDataModel("cartão 1", "", new Gallery()));
-    cardModelList.push(new CardDataModel("cartão 2", "", new Gallery()));
-    cardModelList.push(new CardDataModel("cartão 3", "", new Gallery()));
+    cardModelList.push(new CardModel("cartão 1", "", new Gallery()));
+    cardModelList.push(new CardModel("cartão 2", "", new Gallery()));
+    cardModelList.push(new CardModel("cartão 3", "", new Gallery()));
 
     const carouselAppComponent = new CarouselAppComponent(cardModelList);
+
+    const carousel = carouselAppComponent.render();
+
+
 
 }
 
