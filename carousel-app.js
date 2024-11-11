@@ -28,15 +28,17 @@ class CardModel {
 
 class CarouselComponent {
 
-    cardsContainerElement = document.querySelector("#carousel-app .cards-container");
-    
-    
+    cardsContainerElement;
+    carouselNavigator;
+
     cardModelList
 
     constructor(cardModelList) {
         this.cardModelList = cardModelList;
-    }
 
+        this.cardsContainerElement = document.querySelector("#carousel-app .cards-container");
+        this.initCarouselNavigator();
+    }
 
     #generateCard(cardModel) {
         const li = document.createElement("li");
@@ -60,26 +62,48 @@ class CarouselComponent {
         })
     }
 
-    clearCardsContainer () {
+    clearCardsContainer() {
         this.cardsContainerElement.innerHTML = "";
     }
 
     changeCardModelListPosition(direction) {
         if (direction == "right") {
-            let aux = this.cardModelList[this.cardModelList.length - 1];
-            for(let i = this.cardModelList.length - 1; i > 0; i--) {
-                this.cardModelList[i] = this.cardModelList[i - i];
+            let aux;
+            aux = this.cardModelList[this.cardModelList.length - 1];
+            for (let i = this.cardModelList.length - 1; i > 0; i--) {
+                this.cardModelList[i] = this.cardModelList[i - 1];
             }
             this.cardModelList[0] = aux;
-       } else if (direction == "left") {
-            let aux = this.cardModelList[0];
-            for(let i = 0; i < this.cardModelList.length; i++) {
+
+        } else if (direction == "left") {
+            let aux;
+            aux = this.cardModelList[0];
+            for (let i = 0; i < this.cardModelList.length; i++) {
                 this.cardModelList[i] = this.cardModelList[i + 1];
             }
             this.cardModelList[this.cardModelList.length - 1] = aux;
-       }
-       this.clearCardsContainer();
-       this.putCardsOnContainer();
+        }
+        this.clearCardsContainer();
+        this.putCardsOnContainer();
+    }
+
+    initCarouselNavigator () {
+        this.carouselNavigator = document.querySelector("#carousel-app .carousel-navigator");
+
+        console.log(this.carouselNavigator.children[0]);
+    
+        this.carouselNavigator.children[0].addEventListener("click", function () {
+            this.changeCardModelListPosition("left");
+        }.bind(this));
+
+        this.carouselNavigator.children[1].addEventListener("click", function () {
+            // TO-DO: Show Gallery Pop UP:
+        }.bind(this));
+
+        this.carouselNavigator.children[2].addEventListener("click", function () {
+            this.changeCardModelListPosition("right");
+        }.bind(this));
+
     }
 
 }
