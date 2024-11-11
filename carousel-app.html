@@ -42,18 +42,18 @@
 
         #carousel-app .carousel-handler {}
 
-        #carousel-app .carousel-handler .cards-container {
+        #carousel-app .cards-container {
             background-color: purple;
             width: 1200px;
 
 
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
         }
 
-        #carousel-app .carousel-handler .cards-container .card {
+        #carousel-app .cards-container .card {
             /* width: 300px; */
             /* height: 500px; */
 
@@ -65,25 +65,27 @@
             align-items: center;
         }
 
+        .card:nth-of-type(1) {
+            /* background-color: red; */
+            width: 400px;
+            /* height: 250px; */
+        }
+
+        .card:nth-of-type(2) {
+            /* background-color: blue; */
+            width: 500px;
+            /* height: 500px */
+        }
+
+        .card:nth-of-type(3) {
+            /* background-color: green; */
+            width: 400px;
+            /* height: 250px; */
+        }
+
         #carousel-app .card img {
             width: 100%;
             height: auto;
-        }
-
-        .card:nth-of-type(1) {
-            /* background-color: red; */
-            width: 150px;
-            height: 250px;
-        }
-        .card:nth-of-type(2) {
-            /* background-color: blue; */
-            width: 300px;
-            height: 500px
-        }
-        .card:nth-of-type(3) {
-            /* background-color: green; */
-            width: 150px;
-            height: 250px;
         }
     </style>
 </head>
@@ -91,15 +93,16 @@
 <body>
 
     <div id="carousel-app">
-
-        <!-- All carousel app stuffs here -->
-
+        <div class="cards-container">
+            <!-- Cards with images and aditional contents is added here by js -->
+        </div>
+        <nav class="carousel-navigator">
+            <button>To Left</button>
+            <button>More About</button>
+            <button>To Right</button>
+        </nav>
     </div>
-    <nav class="carousel-navigator">
-        <button>To Left</button>
-        <button>More About</button>
-        <button>To Right</button>
-    </nav>
+
 
 
 
