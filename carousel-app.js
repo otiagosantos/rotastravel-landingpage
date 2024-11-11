@@ -31,19 +31,29 @@ class CarouselComponent {
     cardsContainerElement;
     carouselNavigator;
 
-    cardModelList
+    cardModelList;
+
+
+    cardWidth = {
+        smallW: 400,
+        bigW: 400
+    }
 
     constructor(cardModelList) {
         this.cardModelList = cardModelList;
 
         this.cardsContainerElement = document.querySelector("#carousel-app .cards-container");
         this.initCarouselNavigator();
+
+
     }
 
-    #generateCard(cardModel) {
+    #generateCard(cardModel, width = 400) {
         const li = document.createElement("li");
         li.setAttribute("class", "card");
         li.setAttribute("id", `card-${cardModel.title.trim()}`);
+
+        li.style.width = `${width}px`;
 
         li.innerHTML = `
         <figure>
@@ -56,10 +66,21 @@ class CarouselComponent {
     }
 
     putCardsOnContainer() {
-        this.cardModelList.forEach(cardModel => {
-            const cardElement = this.#generateCard(cardModel);
+
+        for (let i = 0; i < 3; i++) {
+            const cardElement = this.#generateCard(this.cardModelList[i], i == 1 ? this.cardWidth.bigW : this.cardWidth.smallW);
             this.cardsContainerElement.appendChild(cardElement);
-        })
+        }
+
+
+
+        // let count = 0;
+        // this.cardModelList.forEach(cardModel => {
+        //     const cardElement = this.#generateCard(cardModel, count == 1 ? this.cardWidth.bigW : this.cardWidth.smallW);
+        //     this.cardsContainerElement.appendChild(cardElement);
+
+        //     count++;
+        // })
     }
 
     clearCardsContainer() {
@@ -67,6 +88,9 @@ class CarouselComponent {
     }
 
     changeCardModelListPosition(direction) {
+
+        //Change position of cardsModels on List:
+
         if (direction == "right") {
             let aux;
             aux = this.cardModelList[this.cardModelList.length - 1];
@@ -83,17 +107,74 @@ class CarouselComponent {
             }
             this.cardModelList[this.cardModelList.length - 1] = aux;
         }
+
+
+
+        //refresh render:
         this.clearCardsContainer();
         this.putCardsOnContainer();
     }
 
-    initCarouselNavigator () {
+    animateChangeCardsPositions(direction) {
+
+        //--------------------------- Animation test
+        // Animate and change only style position:
+        const cardElementList = document.querySelectorAll("li.card");
+
+        // const smallW = parseFloat(getComputedStyle(cardElementList[0]).width);
+        // const bigW = parseFloat(getComputedStyle(cardElementList[1]).width);
+
+        if (direction == "right") {
+
+            cardElementList[1].style.width = `${this.cardWidth.smallW}px`;
+
+            cardElementList[0].style.transform = `translateX(${this.cardWidth.smallW}px)`;
+            cardElementList[1].style.transform = `translateX(${this.cardWidth.smallW}px)`;
+            cardElementList[2].style.transform = `translateX(${-this.cardWidth.smallW * 2}px)`;
+
+
+            cardElementList[2].style.width = `${this.cardWidth.bigW}px`;
+
+
+        } else if (direction == "left") {
+
+            //  To Left:
+            cardElementList[1].style.width = `${this.cardWidth.smallW}px`;
+
+            cardElementList[0].style.transform = `translateX(${this.cardWidth.smallW * 2}px)`;
+            cardElementList[1].style.transform = `translateX(${-this.cardWidth.smallW}px)`;
+            cardElementList[2].style.transform = `translateX(${-this.cardWidth.smallW}px)`;
+
+
+            cardElementList[2].style.width = `${this.cardWidth.bigW}px`;
+
+
+        }
+
+        // To Right
+
+    }
+
+    moveCards(direction) {
+
+        this.animateChangeCardsPositions(direction);
+
+        setTimeout(function () {
+            this.changeCardModelListPosition(direction)
+        }.bind(this), 600);
+
+
+    }
+
+
+    initCarouselNavigator() {
         this.carouselNavigator = document.querySelector("#carousel-app .carousel-navigator");
 
         console.log(this.carouselNavigator.children[0]);
-    
+
         this.carouselNavigator.children[0].addEventListener("click", function () {
-            this.changeCardModelListPosition("left");
+            // this.changeCardModelListPosition("left");
+            this.moveCards("left")
         }.bind(this));
 
         this.carouselNavigator.children[1].addEventListener("click", function () {
@@ -101,7 +182,8 @@ class CarouselComponent {
         }.bind(this));
 
         this.carouselNavigator.children[2].addEventListener("click", function () {
-            this.changeCardModelListPosition("right");
+            // this.changeCardModelListPosition("right");
+            this.moveCards("right");
         }.bind(this));
 
     }
@@ -110,9 +192,12 @@ class CarouselComponent {
 
 const cardModelList = new Array();
 
-cardModelList.push(new CardModel("Atacama", "/assets/images/chile-pg-2-b.png"));
-cardModelList.push(new CardModel("Chile", "/assets/images/chile-pg-2.png"));
-cardModelList.push(new CardModel("Machupichu", "/assets/images/chile-pg-2-c.png"));
+cardModelList.push(new CardModel("1", "/assets/images/chile-pg-2.png"));
+cardModelList.push(new CardModel("2", "/assets/images/chile-pg-2-b.png"));
+cardModelList.push(new CardModel("3", "/assets/images/chile-pg-2-c.png"));
+// cardModelList.push(new CardModel("4", "/assets/images/chile-pg-2-d.png"));
+// cardModelList.push(new CardModel("5", "/assets/images/chile-pg-2-e.png"));
+// cardModelList.push(new CardModel("6", "/assets/images/chile-pg-2-f.png"));
 
 const carouselComponent = new CarouselComponent(cardModelList);
 
