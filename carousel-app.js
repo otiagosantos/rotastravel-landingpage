@@ -35,8 +35,8 @@ class CarouselComponent {
 
 
     cardWidth = {
-        smallW: 400,
-        bigW: 400
+        smallW: 500,
+        bigW: 500
     }
 
     constructor(cardModelList) {
