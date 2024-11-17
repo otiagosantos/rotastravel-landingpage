@@ -9,9 +9,6 @@ export class MainNavMenu {
 
     whenScroll () {
         window.addEventListener("scroll", function () {
-
-            console.log(this.element);
-
             if(window.scrollY > 50) {
                 this.element.classList.add("scrolled");
             } else {

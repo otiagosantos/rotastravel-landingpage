@@ -91,7 +91,7 @@ class CarouselComponent {
 
         //Change position of cardsModels on List:
 
-        if (direction == "right") {
+        if (direction == "left") {
             let aux;
             aux = this.cardModelList[this.cardModelList.length - 1];
             for (let i = this.cardModelList.length - 1; i > 0; i--) {
@@ -99,7 +99,7 @@ class CarouselComponent {
             }
             this.cardModelList[0] = aux;
 
-        } else if (direction == "left") {
+        } else if (direction == "right") {
             let aux;
             aux = this.cardModelList[0];
             for (let i = 0; i < this.cardModelList.length; i++) {
@@ -124,7 +124,7 @@ class CarouselComponent {
         // const smallW = parseFloat(getComputedStyle(cardElementList[0]).width);
         // const bigW = parseFloat(getComputedStyle(cardElementList[1]).width);
 
-        if (direction == "right") {
+        if (direction == "left") {
 
             cardElementList[1].style.width = `${this.cardWidth.smallW}px`;
 
@@ -136,7 +136,7 @@ class CarouselComponent {
             cardElementList[2].style.width = `${this.cardWidth.bigW}px`;
 
 
-        } else if (direction == "left") {
+        } else if (direction == "right") {
 
             //  To Left:
             cardElementList[1].style.width = `${this.cardWidth.smallW}px`;
