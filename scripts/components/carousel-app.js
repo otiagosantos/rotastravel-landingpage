@@ -5,8 +5,8 @@
 - [X] Card Builder
 - [ ] Cards Container Slide Manupulator
     - [X] Change Card Positions Behavior
-    - > [ ] Create GUI Navigator.
-    - [ ] Change Card Positions Animation
+    - > [X] Create GUI Navigator.
+    - [X] Change Card Positions Animation
 - [ ] Slide cards with Swipe Motion (For Mobile)
 - [ ] Refactor Code
     - [ ] Isolate CarouselAppComponent Elements & Refactor their attributes entries. 
@@ -73,16 +73,6 @@ class CarouselComponent {
             const cardElement = this.#generateCard(this.cardModelList[i], i == 1 ? this.cardWidth.bigW : this.cardWidth.smallW);
             this.cardsContainerElement.appendChild(cardElement);
         }
-
-
-
-        // let count = 0;
-        // this.cardModelList.forEach(cardModel => {
-        //     const cardElement = this.#generateCard(cardModel, count == 1 ? this.cardWidth.bigW : this.cardWidth.smallW);
-        //     this.cardsContainerElement.appendChild(cardElement);
-
-        //     count++;
-        // })
     }
 
     clearCardsContainer() {
@@ -92,7 +82,6 @@ class CarouselComponent {
     changeCardModelListPosition(direction) {
 
         //Change position of cardsModels on List:
-
         if (direction == "left") {
             let aux;
             aux = this.cardModelList[this.cardModelList.length - 1];
@@ -180,7 +169,6 @@ class CarouselComponent {
         console.log(this.carouselNavigator.children[0]);
 
         this.carouselNavigator.children[0].addEventListener("click", function () {
-            // this.changeCardModelListPosition("left");
             this.moveCards("left")
         }.bind(this));
 
