@@ -129,10 +129,15 @@ class CarouselComponent {
 
             cardElementList[2].style.opacity = "0";
 
+            // cardElementList[1].style.maskImage = "linear-gradient(to left, #000f, #0005)";
+
 
         } else if (direction == "right") {
 
             //  To Right:
+
+            // cardElementList[1].style.maskImage = "linear-gradient(to left, #000f, #000f)";
+
             cardElementList[1].style.width = `${this.cardWidth.smallW}px`;
 
             cardElementList[0].style.transform = `translateX(${this.cardWidth.smallW * 2}px)`;
@@ -144,6 +149,9 @@ class CarouselComponent {
 
 
             cardElementList[0].style.opacity = "0";
+
+
+            // cardElementList[1].style.maskImage = "linear-gradient(to left, #000f, #0005)";
         }
 
 
@@ -164,6 +172,19 @@ class CarouselComponent {
     }
 
     initCarouselNavigator() {
+
+        //MOBILE SWIPE
+
+        // let container = document.querySelector("#carousel-app cards-container");
+
+        this.cardsContainerElement.addEventListener("touchstart", (e) => {
+            alert("mouse up");
+            console.log(e);
+        })
+
+
+
+        // BUTTONS
         this.carouselNavigator = document.querySelector("#carousel-app .carousel-navigator");
 
         console.log(this.carouselNavigator.children[0]);
