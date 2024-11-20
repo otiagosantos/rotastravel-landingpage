@@ -33,6 +33,8 @@ class CarouselComponent {
 
     cardModelList;
 
+    isCardsMoving;
+
 
     cardWidth = {
         smallW: 500,
@@ -44,7 +46,7 @@ class CarouselComponent {
 
         this.cardsContainerElement = document.querySelector("#carousel-app .cards-container");
         this.initCarouselNavigator();
-
+        this.isCardsEnableToMove = true;
 
     }
 
@@ -157,12 +159,15 @@ class CarouselComponent {
 
     moveCards(direction) {
 
-        this.animateChangeCardsPositions(direction);
+        if (this.isCardsEnableToMove) {
+            this.isCardsEnableToMove = false;
+            this.animateChangeCardsPositions(direction);
 
-        setTimeout(function () {
-            this.changeCardModelListPosition(direction)
-        }.bind(this), 600);
-
+            setTimeout(function () {
+                this.changeCardModelListPosition(direction);
+                this.isCardsEnableToMove = true;
+            }.bind(this), 600);
+        }
 
     }
 
