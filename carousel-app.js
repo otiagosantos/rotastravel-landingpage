@@ -128,6 +128,7 @@ class CarouselComponent {
 
         if (direction == "left") {
 
+            // To Left
             cardElementList[1].style.width = `${this.cardWidth.smallW}px`;
 
             cardElementList[0].style.transform = `translateX(${this.cardWidth.smallW}px)`;
@@ -137,10 +138,12 @@ class CarouselComponent {
 
             cardElementList[2].style.width = `${this.cardWidth.bigW}px`;
 
+            cardElementList[2].style.opacity = "0";
+
 
         } else if (direction == "right") {
 
-            //  To Left:
+            //  To Right:
             cardElementList[1].style.width = `${this.cardWidth.smallW}px`;
 
             cardElementList[0].style.transform = `translateX(${this.cardWidth.smallW * 2}px)`;
@@ -151,9 +154,9 @@ class CarouselComponent {
             cardElementList[2].style.width = `${this.cardWidth.bigW}px`;
 
 
+            cardElementList[0].style.opacity = "0";
         }
 
-        // To Right
 
     }
 
@@ -170,7 +173,6 @@ class CarouselComponent {
         }
 
     }
-
 
     initCarouselNavigator() {
         this.carouselNavigator = document.querySelector("#carousel-app .carousel-navigator");
@@ -200,9 +202,9 @@ const cardModelList = new Array();
 cardModelList.push(new CardModel("1", "/assets/images/chile-pg-2.png"));
 cardModelList.push(new CardModel("2", "/assets/images/chile-pg-2-b.png"));
 cardModelList.push(new CardModel("3", "/assets/images/chile-pg-2-c.png"));
-// cardModelList.push(new CardModel("4", "/assets/images/chile-pg-2-d.png"));
-// cardModelList.push(new CardModel("5", "/assets/images/chile-pg-2-e.png"));
-// cardModelList.push(new CardModel("6", "/assets/images/chile-pg-2-f.png"));
+cardModelList.push(new CardModel("4", "/assets/images/chile-pg-2-d.png"));
+cardModelList.push(new CardModel("5", "/assets/images/chile-pg-2-e.png"));
+cardModelList.push(new CardModel("6", "/assets/images/chile-pg-2-f.png"));
 
 const carouselComponent = new CarouselComponent(cardModelList);
 
