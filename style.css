@@ -1,0 +1,55 @@
+:root {
+    /* COLORS */
+    /* id visual */
+    --clr-id-title-1: #FDF6F9;
+    --clr-id-hl-1: #0C8186;
+    --clr-id-hl-2: #FDCD55;
+    --clr-id-hl-3: #51360F;
+    --clr-id-bg-1: #1501022;
+
+    /* site */
+    --clr-site-text-1: #FDFDFD;
+    --clr-site-bg-1: #01132A;
+
+    --fm-site-1: '';
+
+    --fs-site-XL: 3rem;
+    --fs-site-L: 2rem;
+    --fs-site-M: 1rem;
+    --fs-site-S: 0.75rem;
+    --fs-site-XS: 0.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div#site-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#site-container > * {
+    width: 50px;
+    height: 50px;
+    background-color: #707070;
+    margin: 1px;
+}
+
+
+header#site-header {
+    width: 100vw;
+}
+
+main#site-main {
+    width: 100vw;
+    height: calc(100vh - 106px);
+
+    padding: 2rem 45%;
+}
+
+footer#site-footer {
+    width: 100vw
+}
