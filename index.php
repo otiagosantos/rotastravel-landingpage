@@ -21,6 +21,7 @@ if ($uri == "/paralax") {
 		<title>Rotas Travel</title>
 
 		<link rel="stylesheet" href="/styles/global.css">
+		<link rel="stylesheet" href="/styles/responsive.css">
 
 
 		<script src="/scripts/index.js" type="module" defer></script>
@@ -28,9 +29,9 @@ if ($uri == "/paralax") {
 	</head>
 
 	<body>
-		<nav id="main-navigator">
+		<nav id="main-navigator" class="default-max-width">
 			<div id="logo-container">
-				<img src="/assets/icons/" alt="" class="logo">
+				<img src="/assets/icons/logo.png" alt="" class="logo">
 			</div>
 			<ul>
 				<li>
@@ -66,7 +67,7 @@ if ($uri == "/paralax") {
 		<header>
 			<section id="hero">
 				<div id="hero-title" class="title-container">
-					<h2>EXPLORE A AMÉRICA DO SUL E VIVA ESSA EXPERIÊNCIA</h2>
+					<h2>EXPLORE A AMÉRICA DO SUL<br> E VIVA ESSA EXPERIÊNCIA</h2>
 				</div>
 				<a href="#destinos">
 					<span>Arraste para baixo</span>
