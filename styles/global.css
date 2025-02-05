@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* COLORS */
+    /* id visual */
+    --clr-id-title-1: #FDF6F9;
+    --clr-id-hl-1: #0C8187;
+    --clr-id-hl-2: #FDCD55;
+    --clr-id-hl-3: #51360F;
+    --clr-id-bg-1: #150102;
+
+    /* site */
+    --clr-site-text-1: #FDFDFD;
+    --clr-site-bg-1: #01132A;
+
+    --fm-site-1: 'Arial';
+
+    --fs-site-XL: 3rem;
+    --fs-site-L: 2rem;
+    --fs-site-M: 1rem;
+    --fs-site-S: 0.75rem;
+    --fs-site-XS: 0.5rem;
+}
+
+
