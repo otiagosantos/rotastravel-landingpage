@@ -1,11 +1,8 @@
 /* HD --------------------------------- */
-@media (max-width: 1744px) {
+@media (max-width: 1366px) {
 
     /* Nav ---------------------------- */
-    nav#main-navigator {
-        height: 8rem;
 
-    }
 
 }
 
