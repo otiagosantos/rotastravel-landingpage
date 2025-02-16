@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/header.css" />
 
     <script src="/scripts/global.js" defer></script>
+    <script src="/scripts/header.js" defer></script>
 
 
 </head>
@@ -50,11 +51,14 @@
             </div>
 
             <div id="mobile_nav-button">
-                |||
+                <span>
+                    |||
+                </span>
             </div>
         </nav>
 
-        <div id="mobile_nav-menu">
+        <div id="mobile_nav-menu" hidden>
+            <span id="">x</span>
             <ul id="mobile_nav-list">
                 <li class="list-item"><a href="#">Destinos</a></li>
                 <li class="list-item"><a href="#">História</a></li>

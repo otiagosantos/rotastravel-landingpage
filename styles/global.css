@@ -16,8 +16,8 @@
 
     --fm-site-1: 'Roboto';
 
-    --fs-site-XL: 3rem;
-    --fs-site-L: 2rem;
+    --fs-site-XL: 2.5rem;
+    --fs-site-L: 1.70rem;
     --fs-site-M: 1rem;
     --fs-site-S: 0.75rem;
     --fs-site-XS: 0.5rem;
@@ -50,7 +50,7 @@ body {
 @media (max-width: 1250px) {
 :root {
     --fs-site-XL: 2rem;
-    --fs-site-L: 1.70rem;
+    --fs-site-L: 1.5rem;
     --fs-site-M: 1rem;
     --fs-site-S: 0.85rem;
     --fs-site-XS: 0.75rem;
