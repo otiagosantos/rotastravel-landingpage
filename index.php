@@ -36,7 +36,7 @@
                 <li class="list-item"><a href="#">Contato</a></li>
 
             </ul>
-            <div id="navbar-social_media">
+            <div id="navbar_social-media">
                 <div class="icon-container">
                     <a href="">
                         <img src="/assets/icons/instagram.svg" alt="">
@@ -53,6 +53,16 @@
                 |||
             </div>
         </nav>
+
+        <div id="mobile_nav-menu">
+            <ul id="mobile_nav-list">
+                <li class="list-item"><a href="#">Destinos</a></li>
+                <li class="list-item"><a href="#">História</a></li>
+                <li class="list-item"><a href="#">Localização</a></li>
+                <li class="list-item"><a href="#">Contato</a></li>
+
+            </ul>
+        </div>
 
     </header>
 
