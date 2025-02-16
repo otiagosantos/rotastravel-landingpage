@@ -51,9 +51,7 @@
             </div>
 
             <div id="mobile_nav-button">
-                <span>
-                    |||
-                </span>
+                <span></span>
             </div>
         </nav>
 

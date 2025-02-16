@@ -59,6 +59,7 @@ header {
     color: #f5f5f5;
     cursor: pointer;
     display: none;
+    font-size: var(--fs-site-L);
 }
 
 /* #mobile_nav-menu {
@@ -113,6 +114,14 @@ header {
         display: flex;
         align-items: center;
         height: 60px;
+    }
+    #mobile_nav-button::before {
+        content: "|||";
+        transform: rotate(90deg);
+    }
+    #mobile_nav-button.active::before {
+        content: "x";
+        transform: rotate(0deg);
     }
 
 
