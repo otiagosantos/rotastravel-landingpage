@@ -43,6 +43,7 @@ body {
 
 .btn {
     cursor: pointer;
+    user-select: none;
 }
 
 .cta-btn { 
@@ -66,10 +67,26 @@ body {
     -webkit-backdrop-filter: blur(5.2px);
 }
 
+a.btn {
+    text-decoration: none;
+    color: var(--clr-site-text-1);
+    font-size: var(--fs-site-L);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
 .title {
     font-size: var(--fs-site-XL);
     text-align: center;
+    text-transform: uppercase;
 }
+
+.content-width {
+    max-width: 1440px;
+    width: 90vw;
+}
+
+
 @media (max-width: 1800px) {
     :root {
         --fs-site-XL: 2.5rem;
