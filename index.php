@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/hero.css" />
 
     <script src="/scripts/global.js" defer></script>
     <script src="/scripts/header.js" defer></script>
@@ -27,9 +28,9 @@
 
     <header>
         <nav id="navbar">
-            <div id="navbar-logo_container" class="icon-container">
+            <a href="#hero" id="navbar-logo_container" class="icon-container">
                 <img src="/assets/icons/logo.png" alt="">
-            </div>
+            </a>
             <ul id="navbar_list">
                 <li class="list-item"><a href="#">Destinos</a></li>
                 <li class="list-item"><a href="#">História</a></li>
@@ -68,6 +69,30 @@
 
     </header>
 
+    <main>
+
+        <section id="hero">
+            <div id="cactos" hidden>
+                <img src="/assets/images/cactos-pg-1.png" alt="Imagem ilustrativa de um cactos.">
+            </div>
+            <div id="hero_content">
+                <h2 class="title">EXPLORE A AMÉRICA DO SUL E VIVA ESSA EXPERIÊNCIA</h2>
+
+                <!-- cta = Call To Action -->
+                <div id="hero_cta-btn">
+                    <div class="btn cta-btn">
+                        <span>Arraste para baixo</span>
+                        <img src="/assets/icons/icone-para-baixo-pg-1.png" />
+                    </div>
+                </div>
+            </div>
+            <div id="hero_bg">
+                <img src="/assets/images/atacama-pg-1.png" alt="Atacama servindo como imagem de fundo.">
+            </div>
+        </section>
+
+
+    </main>
 
 
 </body>
