@@ -72,20 +72,21 @@
     <main>
 
         <section id="hero">
-            <div id="cactos" hidden>
+            <div id="cactos">
                 <img src="/assets/images/cactos-pg-1.png" alt="Imagem ilustrativa de um cactos.">
             </div>
             <div id="hero_content">
-                <h2 class="title">EXPLORE A AMÉRICA DO SUL E VIVA ESSA EXPERIÊNCIA</h2>
+                <h2 class="title">EXPLORE A AMÉRICA DO SUL<br>E VIVA ESSA EXPERIÊNCIA</h2>
 
-                <!-- cta = Call To Action -->
-                <div id="hero_cta-btn">
-                    <div class="btn cta-btn">
-                        <span>Arraste para baixo</span>
-                        <img src="/assets/icons/icone-para-baixo-pg-1.png" />
-                    </div>
+            </div>
+            <!-- cta = Call To Action -->
+            <div id="hero_cta-btn">
+                <div class="btn cta-btn">
+                    <span>Arraste para baixo</span>
+                    <img src="/assets/icons/icone-para-baixo-pg-1.png" />
                 </div>
             </div>
+
             <div id="hero_bg">
                 <img src="/assets/images/atacama-pg-1.png" alt="Atacama servindo como imagem de fundo.">
             </div>

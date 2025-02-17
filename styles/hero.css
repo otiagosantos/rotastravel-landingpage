@@ -1,22 +1,52 @@
 #hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    width: 100vw;
+    height: 100vh;
 }
 
 #cactos {
     position: absolute;
     right: 0;
+    bottom: 0;
+    transform: translateY(10%);
+    filter: brightness(0.8);
+    /* width: 20%; */
+    height: 80vh;
+    z-index: -1;
+    overflow: hidden;
+}
+#cactos img {
+    width: auto;
+    height: 100%;
+}
+
+#hero_content {
+    padding: 10px;
+}
+
+#hero_cta-btn {
+    position: absolute;
+    bottom: 50px;
 }
 
 #hero_bg {
     position: absolute;
     top: 0;
     /* left: 0; */
-    z-index: -1;
+    z-index: -2;
     overflow-x: hidden;
 
     width: 100vw;
     /* min-height: 120vh; */
 
+    filter:
+        brightness(0.5)
+        saturate(115%)
+        contrast(110%);
 }
 #hero_bg img {
     min-height: 100%;
@@ -24,6 +54,28 @@
     
 }
 
+@media (max-width: 330px) {
+    #cactos {
+        display: none;
+    }
+}
+@media (max-width: 720px) {
+    #cactos {
+        max-height: 50vh;
+        max-width: 30vw;
+    }
+    #cactos img {
+
+    }
+}
+@media (max-width: 1050px) {
+    #cactos {
+        max-width: 30vw;
+    }
+    #cactos img {
+
+    }
+}
 
 @media (max-width: 1920px) {
 
