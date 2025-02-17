@@ -1,0 +1,81 @@
+#historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+#historia_title {
+    margin-bottom: 80px;
+}
+
+#historia_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    /* border: 1px solid red; */
+}
+
+#historia_left-side-content {
+    /* border: 1px solid purple; */
+}
+#historia_left-side-content figure {
+    height: calc(100vh - 150px);
+
+    position: sticky;
+    top: 110px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#historia_left-side-content figure img {
+    max-height: 100%;
+    max-width: 100%;
+}
+#historia_left-side-content figure figcaption {
+    font-size: var(--fs-site-L);
+    font-weight: bold;
+    text-align: center;
+
+    color: var(--clr-site-bg-1);
+    background-color: var(--clr-site-text-1);
+
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+}
+
+#historia_right-side-content {
+    font-size: var(--fs-site-M);
+    text-align: justify;
+    line-height: 1.75rem;
+    font-weight: light;
+
+    width: 70%;
+
+    padding: 1rem 3rem;
+
+    /* border: 1px solid orange; */
+}
+#historia_right-side-content .historia_quote {
+    width: fit-content;
+}
+#historia_right-side-content p {
+    margin: 20px 0;
+}
+#historia_right-side-content span {
+}
+
+#historia_experiencias-list {
+    margin-top: 20px;
+}
+#historia_experiencias-list li {
+    margin: 10px 0;
+    font-weight: bold;
+}

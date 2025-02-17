@@ -41,6 +41,18 @@ body {
 
 }
 
+ul {
+    list-style: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
 .btn {
     cursor: pointer;
     user-select: none;
@@ -86,6 +98,17 @@ a.btn {
     width: 90vw;
 }
 
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+blockquote+p {
+    text-align: right;
+}
 
 @media (max-width: 1800px) {
     :root {
