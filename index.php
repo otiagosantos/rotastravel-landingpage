@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/styles/historia.css" />
     <link rel="stylesheet" href="/styles/localizacao.css" />
     <link rel="stylesheet" href="/styles/contato.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
 
     <script src="/scripts/global.js" defer></script>
     <script src="/scripts/header.js" defer></script>
@@ -186,16 +187,17 @@
                 <!-- <img src="/assets/images/montanha-fundo-pg-2.png" alt=""> -->
             </div>
             <div id="contato_content">
-                <span id="contato_cta" class="uppercase bold">Entre em contato, não perca tempo</span>
+                <span id="contato_cta" class="uppercase bold">Entre em contato, não perca tempo!</span>
             
                 <a href="#" class="btn cta-btn">
                     Clique aqui
                 </a>
             </div>
-
         </section>
     </main>
-
+    <footer>
+        Rotas Travel - 2025  
+    </footer>
 
 </body>
 
