@@ -86,7 +86,19 @@
     position: absolute;
     bottom: 0;
     right: 30px;
+    z-index: -3;
 }
 #historia_bg img {
     filter: opacity(0.6);
+}
+
+
+@media (max-width: 1050px) {
+    #historia_content {
+        flex-direction: column;
+        gap: 6rem;
+    }
+    #historia_right-side-content {
+        width: 100%;
+    }
 }
