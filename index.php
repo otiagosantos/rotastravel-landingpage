@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/hero.css" />
     <link rel="stylesheet" href="/styles/destinos.css" />
     <link rel="stylesheet" href="/styles/historia.css" />
+    <link rel="stylesheet" href="/styles/localizacao.css" />
 
     <script src="/scripts/global.js" defer></script>
     <script src="/scripts/header.js" defer></script>
@@ -158,7 +159,27 @@
                 <img src="/assets/images/logo-com-pouca-opacidade-pg 3.png" alt="">
             </div>
         </section>
-
+        <section id="localizacao">
+            <div id="localizacao_bg">
+                <img src="/assets/images/machupichu-pg-4.png" alt="">
+            </div>
+            <div id="localizacao_title">
+                <h3 class="title">Localização</h3>
+            </div>
+            <address>
+                Av. General Flores da Cunha
+                4001 - Vila Bom Princípio
+                Cachoeirinha - RS, 94950-001
+            </address>
+            <div id="localizacao_content">
+                <div id="localizacao_left-side-content">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.503783219253!2d-51.0816023229049!3d-29.93618467497824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951973ec157658bf%3A0xcbe2a77ce2c47056!2sAv.%20Gen.%20Flores%20da%20Cunha%2C%204001%20-%20Vila%20Bom%20Principio%2C%20Cachoeirinha%20-%20RS%2C%2094950-001!5e0!3m2!1spt-BR!2sbr!4v1738736068186!5m2!1spt-BR!2sbr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+                </div>
+                <div id="localizacao_left-side-content">
+                    <img src="/assets/images/fachada-pg-4.png" alt="Imagem da fachada da Rotas Travel.">
+                </div>
+            </div>
+        </section>
     </main>
 
 

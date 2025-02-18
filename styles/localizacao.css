@@ -1,0 +1,24 @@
+#localizacao {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    padding-top: 100px;
+}
+
+#localizacao_bg {
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    transform: translateY(-15%);
+
+    width: 100vw;
+}
+#localizacao_bg img {
+    width: 100%;
+}
+
+#localizacao_title {
+
+}
