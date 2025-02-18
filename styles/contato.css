@@ -1,4 +1,27 @@
 #contato {
+    position: relative;
+    min-height: 90vh;
+
+    border: 2px solid red;
+}
+
+#contato_bg {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    z-index: -2;
+    overflow: hidden;
+
+    width: 100vw;
+
+    border: 2px solid green;
+
+}
+#contato_bg img {
+    width: 100%;
+    min-height: 100%;
+
+    filter: brightness(80%);
 }
 
 #contato_content {
@@ -6,9 +29,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    min-height: 80vh;
+    width: 100%;
+    min-height: 90vh;
 }
 
 #contato_cta {
     font-size: var(--fs-site-XL);
+    text-align: center;
+}
+
+@media (max-width: 1050px) {
+    #contato_bg img {
+        width: auto;
+        height: 100%;
+    }
 }
