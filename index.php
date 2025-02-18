@@ -114,8 +114,9 @@ if ($uri != "/") {
                 <h3 class="title">Conheça nosssas rotas e destinos</h3>
             </div>
             <div id="destinos_content" class="content-width">
-                <div></div>
-                <!-- JS INJECTION -->
+                <div id="destinos_gallery-app">
+                    <!-- JS INJECTION -->
+                </div>
             </div>
         </section>
         <section id="historia">

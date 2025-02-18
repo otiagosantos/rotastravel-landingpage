@@ -58,6 +58,15 @@ ul {
     user-select: none;
 }
 
+button.btn {
+    padding: 3px;
+    border: none;
+    background-color: #0000;
+    color: var(--clr-id-title-1);
+    font-size: var(--fs-site-M);
+    font-weight: bold;
+}
+
 .cta-btn { 
     display: flex;
     justify-content: center;
