@@ -1,5 +1,13 @@
 <?php
+$uri = $_SERVER["REQUEST_URI"];
+if ($uri != "/") {
+    $page = str_replace("/", "", $uri . ".php");
 
+    if(!include_once($page)) {
+        include_once("404.php");
+    }
+    exit;
+}
 
 
 
@@ -25,6 +33,7 @@
 
     <script src="/scripts/global.js" defer></script>
     <script src="/scripts/header.js" defer></script>
+    <script src="/scripts/destinos.js" defer></script>
 
 
 </head>
