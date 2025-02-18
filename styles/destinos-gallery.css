@@ -1,0 +1,35 @@
+#destinos_gallery-app {
+    width: 800px;
+
+    border: 2px solid red;
+}
+
+#gallery-app_card-list {
+
+
+}
+#gallery-app_card-list ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+}
+
+#gallery-app_card-list ul li {
+/* TEMP */
+display: flex;
+justify-content: center;
+align-items: center;
+
+    height: 600px;
+    width: 300px;
+
+    border: 2px dotted orange;
+}
+
+#gallery-app_navmenu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
