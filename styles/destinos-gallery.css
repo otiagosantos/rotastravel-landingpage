@@ -6,6 +6,8 @@
 
 #gallery-app_card-list {
 
+    overflow: hidden;
+    width: 100%;
 
 }
 #gallery-app_card-list ul {
@@ -13,6 +15,8 @@
     display: flex;
     gap: 1rem;
 
+    transition: transform 0.5s ease-in-out; 
+    width: max-content;
 }
 
 #gallery-app_card-list ul li {
