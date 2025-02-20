@@ -25,7 +25,8 @@ header {
 
 #navbar-logo_container {
 
-    height: 70px;
+    height: 60px;
+    width: 102px;
 }
 #navbar-logo_container img {
 
@@ -40,9 +41,10 @@ header {
 #navbar_list .list-item a {
     text-decoration: none;
     color: var(--clr-site-text-1);
-    font-size: var(--fs-site-L);
+    font-size: var(--fs-site-M);
     text-transform: uppercase;
     font-weight: 300;
+    filter: drop-shadow(3px 3px 2px #00000090);
 }
 #navbar_list .list-item a:hover {
     border-bottom: 2px solid #fff;
@@ -55,7 +57,7 @@ header {
 }
 #navbar_social-media .icon-container {
     display: flex;
-    height: 50px;
+    height: 35px;
 }
 #navbar_social-media .icon-container img {
     height: 100%;
@@ -110,6 +112,10 @@ header {
 @media (max-width: 1050px) {
     #navbar-logo_container {
         height: 60px;
+    }
+
+    #navbar_list .list-item a {
+        font-size: var(--fs-site-L);
     }
 
     #navbar_social-media{ 

@@ -33,6 +33,9 @@ align-items: center;
 
     /* border: 2px dotted orange; */
 }
+#gallery-app_card-list li span {
+    font-size: var(--fs-site-L);
+}
 #gallery-app_card-list li img {
     width: 100%;
 }
