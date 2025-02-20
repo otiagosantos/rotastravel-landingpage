@@ -7,12 +7,13 @@
     width: 100vw;
     /* height: 100vh; */
     height: calc(100vh + 100px);
+    /* position: relative; */
 }
 
 #cactos {
     position: absolute;
     right: 0;
-    bottom: -20px;
+    bottom: -50px;
     transform: translateY(10%);
     filter: brightness(0.8);
     /* width: 20%; */
@@ -56,7 +57,7 @@
     
 }
 
-@media (max-width: px) {
+@media (max-width: 680px) {
     #cactos {
         display: none;
     }

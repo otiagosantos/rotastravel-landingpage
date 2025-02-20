@@ -14,27 +14,27 @@
 ?>
 
 
-<!DOCTYPE html>
 <html lang="pt_br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Rotas Travel</title>
 
-    <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/header.css" />
-    <link rel="stylesheet" href="/styles/hero.css" />
-    <link rel="stylesheet" href="/styles/destinos.css" />
-    <link rel="stylesheet" href="/styles/destinos-gallery.css" />
-    <link rel="stylesheet" href="/styles/historia.css" />
-    <link rel="stylesheet" href="/styles/localizacao.css" />
-    <link rel="stylesheet" href="/styles/contato.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/destinos.css" />
+    <link rel="stylesheet" href="styles/destinos-gallery.css" />
+    <link rel="stylesheet" href="styles/historia.css" />
+    <link rel="stylesheet" href="styles/localizacao.css" />
+    <link rel="stylesheet" href="styles/contato.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
 
-    <script src="/scripts/global.js" defer></script>
-    <script src="/scripts/header.js" defer></script>
-    <script src="/scripts/destinos-gallery.js" defer></script>
+    <script src="scripts/global.js" defer></script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/destinos-gallery.js" defer></script>
 
 
 </head>
@@ -44,7 +44,7 @@
     <header>
         <nav id="navbar">
             <a href="#hero" id="navbar-logo_container" class="icon-container">
-                <img src="/assets/icons/logo.png" alt="">
+                <img src="assets/icons/logo.png" alt="Logo Rotas Travel">
             </a>
             <ul id="navbar_list">
                 <li class="list-item"><a href="#destinos">Destinos</a></li>
@@ -55,13 +55,13 @@
             </ul>
             <div id="navbar_social-media">
                 <div class="icon-container">
-                    <a href="">
-                        <img src="/assets/icons/instagram.svg" alt="">
+                    <a href="https://www.instagram.com/rotas.travel/" target="_blank">
+                        <img src="assets/icons/instagram.svg" alt="Link instagram">
                     </a>
                 </div>
                 <div class="icon-container">
-                    <a href="">
-                        <img src="/assets/icons/whatsapp.svg" alt="">
+                    <a href="https://api.whatsapp.com/send/?phone=551131630050&text&type=phone_number&app_absent=0" target="_blank">
+                        <img src="assets/icons/whatsapp.svg" alt="Link Whatsapp">
                     </a>
                 </div>
             </div>
@@ -88,7 +88,7 @@
 
         <section id="hero">
             <div id="cactos">
-                <img src="/assets/images/cactos-pg-1.png" alt="Imagem ilustrativa de um cactos.">
+                <img src="assets/images/cactos-pg-1.png" alt="Imagem ilustrativa de um cactos.">
             </div>
             <div id="hero_content">
                 <h2 class="title">EXPLORE A AMÉRICA DO SUL<br>E VIVA ESSA EXPERIÊNCIA</h2>
@@ -98,57 +98,49 @@
             <div id="hero_cta-btn">
                 <a href="#destinos" class="btn cta-btn">
                     <span>Arraste para baixo</span>
-                    <img src="/assets/icons/icone-para-baixo-pg-1.png" />
+                    <img src="assets/icons/icone-para-baixo-pg-1.png" />
                 </a>
             </div>
 
             <div id="hero_bg">
-                <img src="/assets/images/atacama-pg-1.png" alt="Atacama servindo como imagem de fundo.">
+                <img src="assets/images/atacama-pg-1.png" alt="Atacama servindo como imagem de fundo.">
             </div>
         </section>
         <section id="destinos">
             <div id="destinos_bg">
-                <img src="/assets/images/montanha-fundo-pg-2.png" alt="Montas ao fundo.">
+                <img src="assets/images/montanha-fundo-pg-2.png" alt="Montas ao fundo.">
             </div>
 
             <div id="destinos_title">
-                <h3 class="title">Conheça nosssas rotas e destinos</h3>
+                <h3>Conheça nosssas rotas e destinos</h3>
             </div>
             <div id="destinos_content" class="content-width">
                 <div id="destinos_gallery-app" class="content-width">
                     <ul id="gallery-app_card-list">
                         <li>
-                            <span>1</span>
-                            <img src="/assets/images/chile-pg-2.png" alt="">
+                            <span>Bilívia</span>
+                            <img src="assets/cards/bolivia.png" alt="Bolívia">
                         </li>
                         <li>
-                            <span>2</span>
-                            <img src="/assets/images/chile-pg-2-b.png" alt="">
+                            <span>Chile</span>
+                            <img src="assets/cards/chile.png" alt="Chile">
                         </li>
                         <li>
-                            <span>3</span>
-                            <img src="/assets/images/chile-pg-2-c.png" alt="">
+                            <span>Patagônia Argentina</span>
+                            <img src="assets/cards/patagonia_argentina.png" alt="Patagônia Argentina">
                         </li>
                         <li>
-                            <span>4</span>
-                            <img src="/assets/images/chile-pg-2-d.png" alt="">
-                        </li>
-                        <li>
-                            <span>5</span>
-                            <img src="/assets/images/chile-pg-2-e.png" alt="">
-                        </li>
-                        <li>
-                            <span>6</span>
-                            <img src="/assets/images/chile-pg-2-f.png" alt="">
+                            <span>Patagônia Chilena</span>
+                            <img src="assets/cards/patagonia_chilena.png" alt="Patagônia Chilena">
                         </li>
                     </ul>
                     <div id="gallery-app_navmenu">
                         <button class="btn">
-                           <img src="/assets/icons/seta-pg-2.png" alt="Avança para Esquerda"> 
+                           <img src="assets/icons/seta-pg-2.png" alt="Avança para Esquerda"> 
                         </button>
-                        <button class="btn">Ver Mais</button>
+                        <div></div>
                         <button class="btn">
-                            <img src="/assets/icons/seta-pg-2.png" alt="Avança para Direita.">
+                            <img src="assets/icons/seta-pg-2.png" alt="Avança para Direita.">
                         </button>
                     </div>
                 </div>
@@ -162,7 +154,7 @@
             <div id="historia_content" class="content-width">
                 <div id="historia_left-side-content">
                     <figure class="card">
-                        <img src="/assets/images/foto-veronica-pg 3.png" alt="">
+                        <img src="assets/images/veronica.png" alt="Foto Verônica Matos - CEO Rotas Travel.">
 
                         <figcaption>Verônica Matos | CEO</figcaption>
                     </figure>
@@ -204,38 +196,46 @@
                 </div>
             </div>
             <div id="historia_bg">
-                <img src="/assets/images/logo-com-pouca-opacidade-pg 3.png" alt="">
+                <img src="assets/images/logo-com-pouca-opacidade-pg 3.png" alt="Logo Rotas Travel de fundo.">
             </div>
         </section>
         <section id="localizacao">
             <div id="localizacao_bg">
-                <img src="/assets/images/machupichu-pg-4.png" alt="">
+                <img src="assets/images/machupichu-pg-4.png" alt="Imagem ilustrativa de Machu Picchu">
             </div>
             <div id="localizacao_title">
                 <h3 class="title">Localização</h3>
             </div>
             <address class="content-width">
-                Av. General Flores da Cunha
-                4001 - Vila Bom Princípio
-                Cachoeirinha - RS, 94950-001
+                Alameda Santos 1165
+                Paulista II
+                VIP OFFICE 
+                São Paulo 
             </address>
             <div id="localizacao_content" class="content-width">
                 <div id="localizacao_left-side-content">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.503783219253!2d-51.0816023229049!3d-29.93618467497824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951973ec157658bf%3A0xcbe2a77ce2c47056!2sAv.%20Gen.%20Flores%20da%20Cunha%2C%204001%20-%20Vila%20Bom%20Principio%2C%20Cachoeirinha%20-%20RS%2C%2094950-001!5e0!3m2!1spt-BR!2sbr!4v1738736068186!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        title="Localização Rotas Travel - Google Maps"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d389.8521662026182!2d-46.65400197313696!3d-23.565338171677297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c636f78fb7%3A0xc8c4fd5b1a995474!2sAlameda%20Santos%2C%201165%20-%20Jardim%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001419-000!5e0!3m2!1spt-BR!2sbr!4v1740075180220!5m2!1spt-BR!2sbr"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div id="localizacao_right-side-content">
-                    <img src="/assets/images/fachada-pg-4.png" alt="Imagem da fachada da Rotas Travel.">
+                    <img src="assets/images/vip.png" alt="Imagem da fachada da Rotas Travel.">
                 </div>
             </div>
         </section>
         <section id="contato">
             <div id="contato_bg">
-                <img src="/assets/images/fundo_ultima_pg.png" alt="Imagem e montanhas ao fundo.">
+                <img src="assets/images/fundo_ultima_pg.png" alt="Imagem e montanhas ao fundo.">
             </div>
             <div id="contato_content">
-                <span id="contato_cta" class="uppercase bold">Entre em contato, não perca tempo!</span>
-
-                <a href="#" class="btn cta-btn">
+                <div></div>
+                <span id="contato_cta" class="uppercase bold">Não perca a oportunidade de explorar a América do Sul</span>
+ target="_blank"
+                <a href="https://api.whatsapp.com/send/?phone=551131630050&text&type=phone_number&app_absent=0" class="btn cta-btn" target="_blank">
                     Clique aqui
                 </a>
             </div>
