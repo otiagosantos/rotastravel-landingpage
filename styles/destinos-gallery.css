@@ -1,19 +1,21 @@
 #destinos_gallery-app {
     /* width: 800px; */
 
-    border: 2px solid red;
+    /* border: 2px solid red; */
 
-    overflow: hidden;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 #gallery-app_card-list {
     width: fit-content;
+    height: 100%;
     list-style: none;
     display: flex;
     /* gap: 1rem; */
     /* overflow: hidden; */
 
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 #gallery-app_card-list li {
@@ -24,11 +26,11 @@ justify-content: center;
 align-items: center;
 
     /* height: fit-content; */
-    width: calc(0.33 * 90vw );
-    max-width: calc(0.33 * 1440px);
+    width: calc(90vw / 3);
+    max-width: calc(1440px / 3);
     /* width: max-content; */
 
-    border: 2px dotted orange;
+    /* border: 2px dotted orange; */
 }
 #gallery-app_card-list li img {
     width: 100%;
@@ -39,4 +41,15 @@ align-items: center;
     justify-content: space-around;
     width: 100%;
 
+}
+
+#gallery-app_navmenu .btn:first-child img {
+    transform: rotate(-180deg);
+}
+
+@media (max-width: 1050px) {
+    #gallery-app_card-list li {
+        min-width: 60vw;
+        /* max-height: 90%; */
+    }
 }

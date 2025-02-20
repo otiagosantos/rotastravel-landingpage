@@ -3,32 +3,51 @@ document.addEventListener('DOMContentLoaded', function (){
     const cards = document.querySelectorAll("#gallery-app_card-list li");
     const btnPrev = document.querySelector("#gallery-app_navmenu .btn:first-child");
     const btnNext = document.querySelector("#gallery-app_navmenu .btn:last-child");
+    const btnSeeMore = document.querySelector("#gallery-app_navmenu .btn:nth-child(2)");
+    const appWidth = document.querySelector("#destinos_gallery-app").clientWidth;
 
-    let currentIndex = 0;
+    console.log(appWidth);
+    
+    const isMobile = window.matchMedia("(max-width:1050px)").matches;
+    
+    let currentIndexPosition = isMobile ? 0 : 1;
+    // let currentIndexPosition = 0;
     const cardWidth = cards[0].offsetWidth;
     const totalCards = cards.length;
-    const cardsPerView = 3;
+    const cardsPerView = isMobile ? 1 : 3;
+    let cardSelected = currentIndexPosition;
 
     function updateGallery() {
-        const offset = -(currentIndex * cardWidth);
+        const x = -((currentIndexPosition - 1) * cardWidth);
+        const y = -(currentIndexPosition * cardWidth) + cardWidth / 4;//- appWidth  //- cardWidth / 2;
+        const offset = isMobile ? y : x;
         cardList.style.transform = `translateX(${offset}px)`;
+        cardSelected = currentIndexPosition;
     }
 
     btnPrev.addEventListener('click', function() {
-        if(currentIndex > -1) {
-            currentIndex--;
+        if(currentIndexPosition > 0) {
+            currentIndexPosition--;
         } else {
-            currentIndex = totalCards - cardsPerView +1;
+            currentIndexPosition = totalCards - 1;
         }
         updateGallery();
-    })
+    });
 
     btnNext.addEventListener('click', function () {
-        if (currentIndex < totalCards - cardsPerView +1) {
-            currentIndex++;
+        if (currentIndexPosition < totalCards - 1) {
+            currentIndexPosition++;
         } else {
-            currentIndex = 0;
+            currentIndexPosition = 0;
         }
         updateGallery();
-    })
+    });
+
+
+    btnSeeMore.addEventListener('click', function () {
+        console.log(`ver mais de: ${cardSelected}`);
+        console.log(cards[cardSelected]);
+    });
+
+    updateGallery();
 })

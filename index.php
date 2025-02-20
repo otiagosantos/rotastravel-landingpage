@@ -3,7 +3,7 @@ $uri = $_SERVER["REQUEST_URI"];
 if ($uri != "/") {
     $page = str_replace("/", "", $uri . ".php");
 
-    if(!include_once($page)) {
+    if (!include_once($page)) {
         include_once("404.php");
     }
     exit;
@@ -26,6 +26,7 @@ if ($uri != "/") {
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/hero.css" />
     <link rel="stylesheet" href="/styles/destinos.css" />
+    <link rel="stylesheet" href="/styles/destinos-gallery.css" />
     <link rel="stylesheet" href="/styles/historia.css" />
     <link rel="stylesheet" href="/styles/localizacao.css" />
     <link rel="stylesheet" href="/styles/contato.css" />
@@ -33,7 +34,7 @@ if ($uri != "/") {
 
     <script src="/scripts/global.js" defer></script>
     <script src="/scripts/header.js" defer></script>
-    <script src="/scripts/destinos.js" defer></script>
+    <script src="/scripts/destinos-gallery.js" defer></script>
 
 
 </head>
@@ -114,9 +115,44 @@ if ($uri != "/") {
                 <h3 class="title">Conheça nosssas rotas e destinos</h3>
             </div>
             <div id="destinos_content" class="content-width">
-                <div id="destinos_gallery-app">
-                    <!-- JS INJECTION -->
+                <div id="destinos_gallery-app" class="content-width">
+                    <ul id="gallery-app_card-list">
+                        <li>
+                            <span>1</span>
+                            <img src="/assets/images/chile-pg-2.png" alt="">
+                        </li>
+                        <li>
+                            <span>2</span>
+                            <img src="/assets/images/chile-pg-2-b.png" alt="">
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <img src="/assets/images/chile-pg-2-c.png" alt="">
+                        </li>
+                        <li>
+                            <span>4</span>
+                            <img src="/assets/images/chile-pg-2-d.png" alt="">
+                        </li>
+                        <li>
+                            <span>5</span>
+                            <img src="/assets/images/chile-pg-2-e.png" alt="">
+                        </li>
+                        <li>
+                            <span>6</span>
+                            <img src="/assets/images/chile-pg-2-f.png" alt="">
+                        </li>
+                    </ul>
+                    <div id="gallery-app_navmenu">
+                        <button class="btn">
+                           <img src="/assets/icons/seta-pg-2.png" alt="Avança para Esquerda"> 
+                        </button>
+                        <button class="btn">Ver Mais</button>
+                        <button class="btn">
+                            <img src="/assets/icons/seta-pg-2.png" alt="Avança para Direita.">
+                        </button>
+                    </div>
                 </div>
+
             </div>
         </section>
         <section id="historia">
@@ -198,7 +234,7 @@ if ($uri != "/") {
             </div>
             <div id="contato_content">
                 <span id="contato_cta" class="uppercase bold">Entre em contato, não perca tempo!</span>
-            
+
                 <a href="#" class="btn cta-btn">
                     Clique aqui
                 </a>
@@ -206,7 +242,7 @@ if ($uri != "/") {
         </section>
     </main>
     <footer>
-        Rotas Travel - 2025  
+        Rotas Travel - 2025
     </footer>
 
 </body>
