@@ -29,7 +29,8 @@
 
 #destinos_content {
     z-index: 10;
-    max-height: calc(90vh - 100px);
+    /* max-height: calc(90vh - 100px); */
+    width: fit-content;
 }
 
 #destinos_content div {
@@ -38,3 +39,10 @@
     /* max-height: calc(90vh - 100px); */
     /* background-color: purple; */
 }
+
+
+/* @media (max-height: 585px) {
+    #destinos_content {
+        height: calc(90vh - 100px);
+    }
+} */

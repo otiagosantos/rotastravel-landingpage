@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function (){
 
     function updateGallery() {
         const x = -((currentIndexPosition - 1) * cardWidth);
-        const y = -(currentIndexPosition * cardWidth) + cardWidth / 4;//- appWidth  //- cardWidth / 2;
+        const y = -(currentIndexPosition * cardWidth) + cardWidth / 4;
         const offset = isMobile ? y : x;
         cardList.style.transform = `translateX(${offset}px)`;
         cardSelected = currentIndexPosition;
