@@ -28,6 +28,7 @@
 
 #hero_content {
     padding: 10px;
+    transform: translateY(-100%);
 }
 
 #hero_cta-btn {

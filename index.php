@@ -1,5 +1,12 @@
 <?php
-// $uri = $_SERVER["REQUEST_URI"];
+$uri = $_SERVER["REQUEST_URI"];
+
+$activePopup = false;
+
+if($uri == "/boas-vindas") {
+    $activePopup = true;
+}
+
 // if ($uri != "/") {
 //     $page = str_replace("/", "", $uri . ".php");
 
@@ -9,15 +16,16 @@
 //     exit;
 // }
 
-
-
 ?>
 
 
-<html lang="pt_br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Explore a América do Sul e viva essa experiência.">
+    <meta name="keywords" content="Rotas Travel, Rotas, Travel, Viagem, Destinos, América do Sul, América, Verônica Matos, Bolívia, Argentina, Chile, Patagônia, Brasil" >
+    <meta name="author" content="Verônica Matos" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Rotas Travel</title>
@@ -32,6 +40,8 @@
     <link rel="stylesheet" href="styles/contato.css" />
     <link rel="stylesheet" href="styles/footer.css" />
 
+    <link rel="stylesheet" href="styles/popup.css" />
+
     <script src="scripts/global.js" defer></script>
     <script src="scripts/header.js" defer></script>
     <script src="scripts/destinos-gallery.js" defer></script>
@@ -40,7 +50,17 @@
 </head>
 
 <body>
+    <h1>Rotas Travel</h1>
+    <?php if($activePopup) : ?>
 
+        <!-- <div id="wellcome-popup" class="active">
+            <h2 class="title">Seja Muito Bem Vindo à Rotas Travel!</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, recusandae. Nihil provident, architecto perferendis aliquid repellat minus praesentium, optio ipsum atque consequuntur vel consequatur! Facilis placeat at a autem? Nobis.</p>
+
+            <button id="close-popup">Ok, quero conhecer mais!</button>
+        </div> -->
+
+    <?php endif ?>
     <header>
         <nav id="navbar">
             <a href="#hero" id="navbar-logo_container" class="icon-container">
@@ -118,7 +138,7 @@
                 <div id="destinos_gallery-app" class="content-width">
                     <ul id="gallery-app_card-list">
                         <li>
-                            <span>Bilívia</span>
+                            <span>Bolívia</span>
                             <img src="assets/cards/bolivia.png" alt="Bolívia">
                         </li>
                         <li>

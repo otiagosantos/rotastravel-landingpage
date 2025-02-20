@@ -1,0 +1,31 @@
+#wellcome-popup {
+    display: none;
+}
+
+#wellcome-popup.active {
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    height: fit-content;
+    width: fit-content;
+    max-width: 900px;
+    /* color: #FFF; */
+    background-color: #01132A90;
+
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+
+    padding: 70px 50px;
+}
