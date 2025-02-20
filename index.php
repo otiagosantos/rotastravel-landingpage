@@ -1,13 +1,13 @@
 <?php
-$uri = $_SERVER["REQUEST_URI"];
-if ($uri != "/") {
-    $page = str_replace("/", "", $uri . ".php");
+// $uri = $_SERVER["REQUEST_URI"];
+// if ($uri != "/") {
+//     $page = str_replace("/", "", $uri . ".php");
 
-    if (!include_once($page)) {
-        include_once("404.php");
-    }
-    exit;
-}
+//     if (!include_once($page)) {
+//         include_once("404.php");
+//     }
+//     exit;
+// }
 
 
 
@@ -15,7 +15,7 @@ if ($uri != "/") {
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <meta charset="UTF-8">

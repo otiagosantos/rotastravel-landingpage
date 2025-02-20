@@ -99,6 +99,15 @@ header {
     font-weight: 500;
 } */
 
+@media (max-width: 1920px) {
+    #navbar-logo_container {
+        height: 50px;
+    }
+
+    #navbar_social-media .icon-container {
+        height: 40px;
+    }
+}
 @media (max-width: 1250px) {
     #navbar_list {
         gap: 3rem;
