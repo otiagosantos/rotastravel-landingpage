@@ -1,23 +1,3 @@
-<?php
-$uri = $_SERVER["REQUEST_URI"];
-
-$activePopup = false;
-
-if($uri == "/boas-vindas") {
-    $activePopup = true;
-}
-
-// if ($uri != "/") {
-//     $page = str_replace("/", "", $uri . ".php");
-
-//     if (!include_once($page)) {
-//         include_once("404.php");
-//     }
-//     exit;
-// }
-
-?>
-
 
 <html lang="pt-br">
 
@@ -51,17 +31,7 @@ if($uri == "/boas-vindas") {
 
 <body>
     <h1>Rotas Travel</h1>
-    <?php if($activePopup) : ?>
-
-        <!-- <div id="wellcome-popup" class="active">
-            <h2 class="title">Seja Muito Bem Vindo à Rotas Travel!</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, recusandae. Nihil provident, architecto perferendis aliquid repellat minus praesentium, optio ipsum atque consequuntur vel consequatur! Facilis placeat at a autem? Nobis.</p>
-
-            <button id="close-popup">Ok, quero conhecer mais!</button>
-        </div> -->
-
-    <?php endif ?>
-    <header>
+     <header>
         <nav id="navbar">
             <a href="#hero" id="navbar-logo_container" class="icon-container">
                 <img src="assets/icons/logo.png" alt="Logo Rotas Travel">
@@ -188,31 +158,18 @@ if($uri == "/boas-vindas") {
                         <p>—Mario Quintana</p>
                     </div>
 
-                    <p>Sempre que eu viajava, eu queria capturar rudo na lente da minha câmera, mas a cada clique percebia e sentia vibrar meu desejo que mais pessoas tinha que ver o mesmo que eu estava vendo e sentindo, porque não conseguia guardar exatamente como era, que só tirar fotos e fazer vídeos não seria o suficiente para as pessoas realmente viverem aquele momento naquele lugar que eu também estava vivenciando.</p>
+                    <p>Sempre que eu viajava, eu queria capturar tudo na lente da minha câmera, mas a cada clique percebia e sentia vibrar meu desejo que mais pessoas tinham que ver o mesmo que eu estava vendo e sentindo, porque não conseguia guardar exatamente como era, que só tirar fotos e fazer vídeos não seria o suficiente para as pessoas realmente viverem aquele momento naquele lugar que eu também estava vivenciando.</p>
 
                     <p>A Rotas Travel nasceu do desejo de oferecer experiências únicas e memoráveis, conectando pessoas aos encantos e riquezas naturais, principalmente na América do Sul que é a minha paixão.</p>
 
                     <p>Nos tornamos uma agência de turismo com foco em explorar cada detalhe que esse continente fascinante tem para nos oferecer.</p>
 
-                    <p>Nosso compromisso juntamente com nossas experiências nos destinos é garantir que cada viagem seja mais que apenas uma visita e destinos turísticos, mas sim, uma imersão autêntica e segura. Cuidamos de tudo, desde o planejamento até o suporte durante toda a jornada, para que nossos viajantes possam desfrutar plenamente da experiência com todo o compromisso que podemos oeferecer e tranquilidade para os nossos biajantes durante todo o percurso da viagem.</p>
+                    <p>Nosso compromisso juntamente com nossas experiências nos destinos é garantir que cada viagem seja mais que apenas uma visita a destinos turísticos, mas sim, uma imersão autêntica e segura. Cuidamos de tudo, desde o planejamento até o suporte durante toda a jornada, para que nossos viajantes possam desfrutar plenamente da experiência com todo o compromisso que podemos oferecer e tranquilidade para os nossos viajantes durante todo o percurso da viagem.</p>
 
                     <span class="bold uppercase">Experiências:</span>
 
                     <p>Somos especialistas em destinos icônicos na América do Sul, oferecendo viagens contemplativas e cheias de aventura.</p>
 
-                    <!-- <ul id="historia_experiencias-list">
-                        <li>Patatgônia Argentina e Chilena</li>
-
-                        <li>Vinhedos de Santiago, Chile</li>
-
-                        <li>Deserto do Atacama e Kalama</li>
-
-                        <li>Salar de Uyuni, Bolívia</li>
-                    </ul> -->
-
-                    <!-- <p>Com roteiros que vão do ecoturismo e aventura ao turismo cultural e gastronômico, <br> garantimos experiências completas para todos os estilos de viagem.</p>
-
-                    <span>Lua de mel | Casal | Melhor Idade | Amigos | Aventura | Cruzeiro | Família</span> -->
                 </div>
             </div>
             <div id="historia_bg">
@@ -254,7 +211,6 @@ if($uri == "/boas-vindas") {
             <div id="contato_content">
                 <div></div>
                 <span id="contato_cta" class="uppercase bold">Não perca a oportunidade de explorar a América do Sul</span>
- target="_blank"
                 <a href="https://api.whatsapp.com/send/?phone=551131630050&text&type=phone_number&app_absent=0" class="btn cta-btn" target="_blank">
                     Clique aqui
                 </a>

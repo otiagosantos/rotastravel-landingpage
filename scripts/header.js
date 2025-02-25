@@ -8,4 +8,3 @@ function toggleNavbarList () {
 
 mobileNavButton.addEventListener("click", toggleNavbarList)
 
-
